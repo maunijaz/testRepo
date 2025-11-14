@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 
 const stats = [
   {
-    number: 50000,
+    number: 2000,
     label: 'Active Users',
     suffix: '+',
   },
