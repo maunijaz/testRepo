@@ -4,7 +4,7 @@ import TypingText from './TypingText';
 const HeroSection = () => {
   return (
     <div className="relative bg-black min-h-screen">
-      <div className="absolute inset-0 z-0 opacity-30 overflow-hidden">
+      <div className="absolute inset-0 z-0 opacity-70 overflow-hidden">
         <video
           src="/images/heroVid1.mp4"
           className="w-full h-full object-cover"

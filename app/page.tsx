@@ -1,8 +1,8 @@
-import HeroSection from '@/app/components/home/HeroSection';
-import FeaturesSection from '@/app/components/home/FeaturesSection';
-import VehicleTypesSection from '@/app/components/home/VehicleTypesSection';
-import WhyChooseUsSection from '@/app/components/home/WhyChooseUsSection';
-import HowItWorksSection from '@/app/components/home/HowItWorksSection';
+import HeroSection from './components/home/HeroSection';
+import FeaturesSection from './components/home/FeaturesSection';
+import VehicleTypesSection from './components/home/VehicleTypesSection';
+import WhyChooseUsSection from './components/home/WhyChooseUsSection';
+import HowItWorksSection from './components/home/HowItWorksSection';
 
 export const metadata = {
   title: 'Apple Tracker - GPS Vehicle Tracking Solutions',
