@@ -3,23 +3,23 @@ import { FaHandshake, FaUserShield, FaChartLine, FaHeadset } from 'react-icons/f
 const values = [
   {
     icon: FaUserShield,
-    title: "Trust & Security",
-    description: "We prioritize the security of your data and vehicles, ensuring peace of mind through advanced encryption and reliable tracking systems."
+    title: "Giving Maximum Benefit",
+    description: "It is about giving you the ability to use GPS tracking to its maximum benefit for maximum return on your investment."
   },
   {
     icon: FaHandshake,
-    title: "Customer First",
-    description: "Our commitment to customer satisfaction drives every decision we make, from product development to after-sales support."
+    title: "Customized Solutions",
+    description: "We know how to customize GPS tracking for your business, your needs and your highest payback."
   },
   {
     icon: FaChartLine,
-    title: "Innovation",
-    description: "We continuously evolve our technology to provide cutting-edge solutions that meet the changing needs of our customers."
+    title: "Reliable Network",
+    description: "Backed by one of the largest, most reliable GPS networks in UAE for consistent performance."
   },
   {
     icon: FaHeadset,
-    title: "24/7 Support",
-    description: "Our dedicated support team is always available to help you with any questions or technical assistance you need."
+    title: "Expert Attention",
+    description: "Winning combination of expert personal attention from our experienced team of professionals."
   }
 ];
 

@@ -8,28 +8,63 @@ import { FiMapPin, FiBell, FiMonitor, FiDollarSign, FiHeadphones } from 'react-i
 const benefits = [
   {
     icon: <FiMapPin className="w-6 h-6" />,
-    title: "Live GPS Updates",
-    description: "High-accuracy location tracking with real-time updates every 10 seconds"
+    title: "Custom Reports",
+    description: "Generate detailed custom reports for comprehensive fleet analysis and insights"
   },
   {
     icon: <FiBell className="w-6 h-6" />,
-    title: "Smart Alerts",
-    description: "Customizable notifications for speed, geofence, and vehicle status"
+    title: "Engine Kill Facility",
+    description: "Remote engine control through mobile app for enhanced security"
   },
   {
     icon: <FiMonitor className="w-6 h-6" />,
-    title: "User-Friendly Dashboard",
-    description: "Intuitive interface accessible from any device, anywhere"
+    title: "Customized Geo-Fences",
+    description: "Set up virtual boundaries and receive alerts when vehicles enter or exit zones"
+  },
+  {
+    icon: <FiBell className="w-6 h-6" />,
+    title: "Over Speed Alerts",
+    description: "Instant notifications when vehicles exceed preset speed limits"
+  },
+  {
+    icon: <FiMonitor className="w-6 h-6" />,
+    title: "Seat Sensor",
+    description: "Monitor passenger occupancy with integrated seat sensors"
+  },
+  {
+    icon: <FiMapPin className="w-6 h-6" />,
+    title: "Weight Sensor",
+    description: "Track vehicle load weight for compliance and optimization"
   },
   {
     icon: <FiDollarSign className="w-6 h-6" />,
-    title: "Affordable Packages",
-    description: "Flexible pricing options for both individual users and fleet managers"
+    title: "Fuel Sensor",
+    description: "Monitor fuel levels and consumption patterns to prevent theft and optimize usage"
+  },
+  {
+    icon: <FiMonitor className="w-6 h-6" />,
+    title: "Drivers & Stop Report",
+    description: "Detailed reports on driver behavior, stops, and route efficiency"
   },
   {
     icon: <FiHeadphones className="w-6 h-6" />,
-    title: "Lifetime Support",
-    description: "Dedicated technical support team available 24/7 for assistance"
+    title: "Ignition On/OFF Report",
+    description: "Track when vehicles are started and stopped for better fleet management"
+  },
+  {
+    icon: <FiMapPin className="w-6 h-6" />,
+    title: "Live Traffic Updates",
+    description: "Real-time traffic information for optimal route planning"
+  },
+  {
+    icon: <FiBell className="w-6 h-6" />,
+    title: "Vehicle Idling Report",
+    description: "Monitor and reduce unnecessary idling to save fuel and reduce emissions"
+  },
+  {
+    icon: <FiMapPin className="w-6 h-6" />,
+    title: "Driver ID Key",
+    description: "Identify and track individual drivers for accountability and performance monitoring"
   }
 ];
 

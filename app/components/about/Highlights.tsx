@@ -2,22 +2,28 @@ import { FaTools, FaHeadset, FaDollarSign } from 'react-icons/fa';
 
 const highlights = [
   {
-    icon: FaTools,
-    title: 'Professional installation and quick setup',
+    icon: FaHeadset,
+    title: '24/7 Customer Support',
     description:
-      'Expert installation and fast setup so you can start tracking in no time. Our technicians ensure a smooth, reliable installation process.',
+      'Round-the-clock customer support available to assist you anytime, anywhere with your tracking needs.',
+  },
+  {
+    icon: FaTools,
+    title: 'High-tech Technology',
+    description:
+      'Advanced GPS tracking technology with real-time updates and comprehensive monitoring features.',
   },
   {
     icon: FaHeadset,
-    title: 'Fast and reliable customer support',
+    title: 'Professional Staff',
     description:
-      '24/7 responsive support from our dedicated team to help with configuration, troubleshooting, and advice.',
+      'Experienced and skilled professionals dedicated to providing the best tracking solutions.',
   },
   {
     icon: FaDollarSign,
-    title: 'Transparent pricing with no hidden costs',
+    title: 'Service on your door step',
     description:
-      'Clear, predictable pricing plans with no surprises — pay only for what you need.',
+      'Convenient installation and support services delivered directly to your location.',
   },
 ];
 

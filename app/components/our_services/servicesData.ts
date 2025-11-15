@@ -1,57 +1,57 @@
 const raw = [
   {
-    slug: 'gps-trackers',
-    title: 'GPS Trackers for All Vehicles',
-    short: 'Accurate tracking for motorcycles, cars, vans, buses and heavy trucks.',
+    slug: 'vehicle-tracking',
+    title: 'Vehicle Tracking System',
+    short: 'Real-time GPS tracking for all types of vehicles with comprehensive monitoring.',
     description:
-      'We supply GPS trackers for motorcycles, cars, vans, buses, and heavy trucks — accurate tracking and reliable performance. Our devices are built for long-term reliability and precise location data.',
+      'Complete vehicle tracking system with real-time location updates, custom reports, engine kill facility through mobile app, seat sensor, customized geo-fences, over speed alerts, weight sensor, fuel sensor, and drivers & stop report. Track any vehicle anytime, anywhere.',
     image: '/images/servicesDet/pic1.jpg',
-    keywords: ['GPS', 'Trackers', 'Vehicles'],
+    keywords: ['Vehicle', 'Tracking', 'GPS'],
   },
   {
-    slug: 'professional-installation',
-    title: 'Professional Installation',
-    short: 'Skilled technicians for safe and neat installation.',
+    slug: 'access-control',
+    title: 'Access Control',
+    short: 'Secure access management for vehicles and facilities.',
     description:
-      'Our skilled technicians install trackers safely and efficiently, ensuring strong signal and neat wiring. We handle installation for all vehicle types and provide configuration on-site.',
+      'Advanced access control system with authentication, authorization, and monitoring capabilities. Manage who can access vehicles and facilities with comprehensive security features.',
     image: '/images/servicesDet/pic2.jpg',
-    keywords: ['Installation', 'Configuration', 'Technician'],
+    keywords: ['Access', 'Control', 'Security'],
   },
   {
-    slug: 'real-time-tracking',
-    title: 'Real-Time Tracking',
-    short: 'Live location, route, speed and history on web & mobile.',
+    slug: 'fuel-sensor',
+    title: 'Fuel Sensor',
+    short: 'Monitor fuel levels and consumption patterns.',
     description:
-      'View your vehicle’s live location, route, speed, and travel history anytime using our web or mobile app. Real-time updates help you respond faster and manage vehicles more effectively.',
+      'Accurate fuel monitoring system to track fuel levels, consumption patterns, and detect fuel theft. Generate detailed reports for fuel management and cost optimization.',
     image: '/images/servicesDet/pic3.jpg',
-    keywords: ['Real-time', 'Live', 'History'],
+    keywords: ['Fuel', 'Sensor', 'Monitoring'],
+  },
+  {
+    slug: 'school-bus-monitoring',
+    title: 'School Bus Monitoring',
+    short: 'Specialized tracking solution for school transportation safety.',
+    description:
+      'Dedicated school bus tracking system with parent notifications, route monitoring, student safety features, and real-time updates. Ensure the safety of students during their commute.',
+    image: '/images/servicesDet/pic4.png',
+    keywords: ['School', 'Bus', 'Safety'],
   },
   {
     slug: 'smart-alerts',
-    title: 'Smart Alerts & Notifications',
-    short: 'Instant alerts for overspeeding, geofence exits and more.',
+    title: 'School Attendance',
+    short: 'Automated attendance tracking for schools.',
     description:
-      'Receive instant alerts for over-speeding, ignition ON/OFF, geofence exits, or battery removal via SMS or app. Customize thresholds and notification channels to fit your operations.',
-    image: '/images/servicesDet/pic4.png',
-    keywords: ['Alerts', 'Geofence', 'Notifications'],
+      'Automated school attendance system integrated with GPS tracking to monitor student presence on buses and at school. Generate attendance reports and notify parents.',
+    image: '/images/servicesDet/pic5.jpg',
+    keywords: ['School', 'Attendance', 'Tracking'],
   },
   {
     slug: 'fleet-management',
-    title: 'Fleet Management Solutions',
-    short: 'Manage multiple vehicles with reports and playback.',
+    title: 'Transmission Service',
+    short: 'Data transmission and communication services.',
     description:
-      'Manage multiple vehicles easily — access detailed trip reports, route playback, idle time, and monthly summaries to optimize operations and reduce costs.',
-    image: '/images/servicesDet/pic5.jpg',
-    keywords: ['Fleet', 'Reports', 'Optimization'],
-  },
-  {
-    slug: 'after-sales-support',
-    title: 'After-Sales & Technical Support',
-    short: 'Ongoing support, maintenance, and warranty services.',
-    description:
-      'We provide ongoing support, maintenance, and warranty services to keep your tracking system running perfectly. Our team is available to help with troubleshooting and updates.',
+      'Reliable data transmission services for GPS tracking devices with multiple connectivity options including GSM, 3G, 4G, and satellite communication.',
     image: '/images/servicesDet/pic6.jpg',
-    keywords: ['Support', 'Warranty', 'Maintenance'],
+    keywords: ['Transmission', 'Communication', 'Data'],
   },
 ];
 

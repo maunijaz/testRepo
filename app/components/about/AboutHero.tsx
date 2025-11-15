@@ -10,14 +10,14 @@ const AboutHero = () => {
           </h1>
           <div className="p-6 mt-8 bg-white rounded-2xl border border-gray-300">
             <p className="text-xl leading-8 text-gray-700">
-              Apple Tracker is a leading GPS tracking and fleet management company that delivers
-              advanced tracking solutions for both personal and commercial vehicles. We aim to make
-              real-time vehicle tracking simple, affordable, and accessible for everyone.
+              We know how to customize GPS tracking for your business, your needs and your highest payback. 
+              Hire partners with leading experience. Together we give you a winning combination of expert 
+              personal attention backed by one of the largest, most reliable GPS networks in UAE.
             </p>
             <p className="mt-4 text-xl leading-8 text-gray-700">
-              Whether you're tracking one bike or managing an entire fleet of heavy vehicles,
-              we provide complete service, from installation and configuration to continuous
-              access through our mobile app and web portal.
+              Track your fleet any time, anywhere in real-time. From basic tracking to advanced fleet 
+              management solutions including school bus tracking, taxi management, cold storage monitoring, 
+              and waste management solutions.
             </p>
           </div>
         </div>

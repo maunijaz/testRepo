@@ -82,12 +82,12 @@ const Navbar: React.FC = () => {
           {/* Left: Logo */}
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative w-12 h-12">
+              <div className="relative w-16 h-16 rounded-lg overflow-hidden">
                 <Image
                   src="/images/logo.jpeg"
                   alt="Apple Tracker Logo"
                   fill
-                  className="object-contain"
+                  className="object-cover"
                 />
               </div>
               <div className="text-lg font-bold text-black">Apple Tracker</div>

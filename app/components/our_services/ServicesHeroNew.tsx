@@ -10,8 +10,9 @@ const ServicesHero = () => {
             Our Services
           </h1>
           <p className="mt-6 text-xl text-gray-700">
-            What We Offer — Reliable tracking hardware, professional installation, powerful
-            software and dedicated support to keep your vehicles safe and visible.
+            Track your fleet any time, anywhere in real-time. Comprehensive GPS tracking solutions 
+            including vehicle tracking, school bus monitoring, taxi management, fleet solutions, 
+            and specialized tracking for various industries.
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <a className="px-6 py-3 text-lg font-semibold text-white rounded-full bg-black hover:bg-gray-800" href="#services">

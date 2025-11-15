@@ -1,14 +1,14 @@
 import Link from 'next/link';
-import { FaCar, FaTools, FaBolt, FaBell, FaTruck, FaLifeRing } from 'react-icons/fa';
+import { FaCar, FaTools, FaBolt, FaBell, FaTruck, FaLifeRing, FaUserShield, FaGraduationCap, FaTaxi } from 'react-icons/fa';
 import { services } from './servicesData';
 
 const iconMap: Record<string, any> = {
-  'GPS Trackers for All Vehicles': FaCar,
-  'Professional Installation': FaTools,
-  'Real-Time Tracking': FaBolt,
-  'Smart Alerts & Notifications': FaBell,
-  'Fleet Management Solutions': FaTruck,
-  'After-Sales & Technical Support': FaLifeRing,
+  'Vehicle Tracking System': FaCar,
+  'Access Control': FaUserShield,
+  'Fuel Sensor': FaBolt,
+  'School Bus Monitoring': FaGraduationCap,
+  'School Attendance': FaGraduationCap,
+  'Transmission Service': FaTools,
 };
 
 const ServicesList = () => {
