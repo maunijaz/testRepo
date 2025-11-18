@@ -111,19 +111,19 @@ ${formData.name}`;
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gradient-to-b from-white to-sky-50">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="bg-gray-50 shadow-lg rounded-2xl p-10 border border-gray-300"
+          className="bg-white shadow-lg rounded-2xl p-10 border border-blue-100"
           initial={{ x: -120, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
         >
-          <h2 className="text-3xl font-bold text-black mb-6">Get in Touch</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">Get in Touch</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="name" className="block text-sm font-medium text-slate-700">
                 Full Name
               </label>
               <input
@@ -134,8 +134,8 @@ ${formData.name}`;
                 onChange={handleChange}
                 autoComplete="name"
                 className={`mt-1 block w-full rounded-lg border ${
-                  errors.name ? 'border-red-400 focus:ring-red-300' : 'border-gray-300'
-                } bg-white py-3 px-4 text-base text-black placeholder-gray-400 shadow-sm transition-shadow duration-200 focus:shadow-lg focus:border-black focus:ring-2 focus:ring-gray-400 focus:outline-none`}
+                  errors.name ? 'border-red-400 focus:ring-red-300' : 'border-blue-100'
+                } bg-white py-3 px-4 text-base text-slate-900 placeholder-slate-400 shadow-sm transition-shadow duration-200 focus:shadow-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none`}
               />
               {errors.name && (
                 <p className="mt-1 text-sm text-red-600">{errors.name}</p>
@@ -143,7 +143,7 @@ ${formData.name}`;
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="block text-sm font-medium text-slate-700">
                 Email
               </label>
               <input
@@ -154,8 +154,8 @@ ${formData.name}`;
                 onChange={handleChange}
                 autoComplete="email"
                 className={`mt-1 block w-full rounded-lg border ${
-                  errors.email ? 'border-red-400 focus:ring-red-300' : 'border-gray-300'
-                } bg-white py-3 px-4 text-base text-black placeholder-gray-400 shadow-sm transition-shadow duration-200 focus:shadow-lg focus:border-black focus:ring-2 focus:ring-gray-400 focus:outline-none`}
+                  errors.email ? 'border-red-400 focus:ring-red-300' : 'border-blue-100'
+                } bg-white py-3 px-4 text-base text-slate-900 placeholder-slate-400 shadow-sm transition-shadow duration-200 focus:shadow-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none`}
               />
               {errors.email && (
                 <p className="mt-1 text-sm text-red-600">{errors.email}</p>
@@ -163,7 +163,7 @@ ${formData.name}`;
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="phone" className="block text-sm font-medium text-slate-700">
                 Phone Number
               </label>
               <input
@@ -174,8 +174,8 @@ ${formData.name}`;
                 onChange={handleChange}
                 autoComplete="tel"
                 className={`mt-1 block w-full rounded-lg border ${
-                  errors.phone ? 'border-red-400 focus:ring-red-300' : 'border-gray-300'
-                } bg-white py-3 px-4 text-base text-black placeholder-gray-400 shadow-sm transition-shadow duration-200 focus:shadow-lg focus:border-black focus:ring-2 focus:ring-gray-400 focus:outline-none`}
+                  errors.phone ? 'border-red-400 focus:ring-red-300' : 'border-blue-100'
+                } bg-white py-3 px-4 text-base text-slate-900 placeholder-slate-400 shadow-sm transition-shadow duration-200 focus:shadow-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none`}
               />
               {errors.phone && (
                 <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
@@ -183,7 +183,7 @@ ${formData.name}`;
             </div>
 
             <div>
-              <label htmlFor="vehicleType" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="vehicleType" className="block text-sm font-medium text-slate-700">
                 Vehicle Type
               </label>
               <select
@@ -191,7 +191,7 @@ ${formData.name}`;
                 name="vehicleType"
                 value={formData.vehicleType}
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-lg border border-gray-300 bg-white py-3 px-4 text-base text-black shadow-sm transition-shadow duration-200 focus:shadow-lg focus:border-black focus:ring-2 focus:ring-gray-400 focus:outline-none appearance-none"
+                className="mt-1 block w-full rounded-lg border border-blue-100 bg-white py-3 px-4 text-base text-slate-900 shadow-sm transition-shadow duration-200 focus:shadow-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none appearance-none"
               >
                 <option value="bike">Bike</option>
                 <option value="car">Car</option>
@@ -201,7 +201,7 @@ ${formData.name}`;
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="message" className="block text-sm font-medium text-slate-700">
                 Message
               </label>
               <textarea
@@ -211,8 +211,8 @@ ${formData.name}`;
                 value={formData.message}
                 onChange={handleChange}
                 className={`mt-1 block w-full rounded-lg border ${
-                  errors.message ? 'border-red-400 focus:ring-red-300' : 'border-gray-300'
-                } bg-white py-3 px-4 text-base text-black placeholder-gray-400 shadow-sm transition-shadow duration-200 focus:shadow-lg focus:border-black focus:ring-2 focus:ring-gray-400 focus:outline-none`}
+                  errors.message ? 'border-red-400 focus:ring-red-300' : 'border-blue-100'
+                } bg-white py-3 px-4 text-base text-slate-900 placeholder-slate-400 shadow-sm transition-shadow duration-200 focus:shadow-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none`}
               />
               {errors.message && (
                 <p className="mt-1 text-sm text-red-600">{errors.message}</p>
@@ -222,7 +222,7 @@ ${formData.name}`;
             <div>
               <button
                 type="submit"
-                className="w-full flex justify-center py-4 px-6 border border-transparent rounded-lg shadow-md text-lg font-semibold text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition transform active:scale-95 duration-150"
+                className="w-full flex justify-center py-4 px-6 border border-transparent rounded-lg shadow-md text-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition transform active:scale-95 duration-150"
               >
                 Send Message
               </button>

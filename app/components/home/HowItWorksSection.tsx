@@ -50,10 +50,10 @@ const HowItWorksSection = () => {
 
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 				<div className="text-center mb-16">
-					<h2 className="text-4xl font-bold text-black mb-4">
+					<h2 className="text-4xl font-bold text-slate-900 mb-4 relative after:content-[''] after:block after:w-24 after:h-1 after:rounded-full after:bg-brand-500 after:mx-auto after:mt-4">
 						How It Works
 					</h2>
-					<p className="text-xl text-gray-600">
+					<p className="text-xl text-slate-600">
 						Using Apple Tracker is simple and seamless — just four easy steps to start tracking!
 					</p>
 				</div>
@@ -70,19 +70,19 @@ const HowItWorksSection = () => {
 							transition={{ duration: 0.5, delay: index * 0.2 }}
 							className="relative"
 						>
-							<div className="bg-gray-50 rounded-lg border border-gray-300 p-6 relative z-10 hover:border-black transition-colors duration-300">
-								<div className="inline-flex items-center justify-center w-12 h-12 text-black rounded-lg mb-4" style={{backgroundColor:'#C0C0C0'}}>
+							<div className="bg-brand-50/60 rounded-2xl border border-brand-100 p-6 relative z-10 hover:shadow-md hover:-translate-y-1 transition duration-300">
+								<div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-100 text-brand-700 mb-4 ring-1 ring-brand-200">
 									<step.icon className="w-6 h-6" />
 								</div>
-								<h3 className="text-xl font-semibold text-black mb-2">
+								<h3 className="text-xl font-semibold text-slate-900 mb-2">
 									{step.title}
 								</h3>
-								<p className="text-gray-700">
+								<p className="text-slate-700">
 									{step.description}
 								</p>
 							</div>
 							{index < steps.length - 1 && (
-								<div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gray-400" />
+								<div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-brand-200" />
 							)}
 						</motion.div>
 					))}

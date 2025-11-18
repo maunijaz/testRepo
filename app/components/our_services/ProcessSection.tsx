@@ -35,15 +35,16 @@ const ProcessSection = () => {
   });
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gray-50 opacity-50" />
-      
+    <section className="py-20 relative overflow-hidden bg-gradient-to-br from-brand-50 via-white to-brand-100/50">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_30%,rgba(29,78,216,0.18),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_75%,rgba(56,189,248,0.22),transparent_65%)]" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-black">
+          <h2 className="text-4xl font-bold text-slate-900">
             How Our Service Works
           </h2>
-          <p className="mt-4 text-xl text-gray-600">
+          <div className="mx-auto mt-4 h-1.5 w-40 rounded-full bg-gradient-to-r from-brand-400 via-brand-600 to-brand-400" />
+          <p className="mt-6 text-xl text-slate-600">
             Get started with Apple Tracker in four simple steps
           </p>
         </div>
@@ -60,19 +61,19 @@ const ProcessSection = () => {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="relative"
             >
-              <div className="bg-white rounded-xl border border-gray-300 p-6 relative z-10 h-full hover:border-black transition-colors duration-300">
-                <div className="flex items-center justify-center w-16 h-16 rounded-full text-black mb-4" style={{backgroundColor:'#C0C0C0'}}>
+              <div className="bg-white/80 backdrop-blur rounded-2xl border border-brand-200 shadow-sm p-6 relative z-10 h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-brand-50 to-brand-100 text-brand-700 mb-4 ring-1 ring-brand-300 shadow-inner">
                   {step.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-black mb-2">
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">
                   {step.title}
                 </h3>
-                <p className="text-gray-700">
+                <p className="text-slate-700">
                   {step.description}
                 </p>
               </div>
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gray-400" />
+                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-brand-300 to-brand-400" />
               )}
             </motion.div>
           ))}

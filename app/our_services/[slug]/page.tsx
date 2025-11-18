@@ -33,8 +33,10 @@ export default async function Page({ params }: Props) {
   const other = services.filter((s) => s.id !== slug).slice(0, 6);
 
   return (
-    <main className="relative min-h-screen bg-gradient-to-br from-white to-blue-50">
-      <div className="absolute inset-0 opacity-5 pattern-dots" />
+    <main className="relative min-h-screen bg-gradient-to-br from-white via-brand-50 to-brand-100/60 overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_25%,rgba(56,189,248,0.25),transparent_65%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_70%,rgba(29,78,216,0.18),transparent_60%)]" />
+      <div className="absolute inset-0 opacity-10 pattern-dots" />
       <ServiceDetail service={service} otherServices={other} />
     </main>
   );

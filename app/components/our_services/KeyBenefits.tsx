@@ -8,63 +8,28 @@ import { FiMapPin, FiBell, FiMonitor, FiDollarSign, FiHeadphones } from 'react-i
 const benefits = [
   {
     icon: <FiMapPin className="w-6 h-6" />,
-    title: "Custom Reports",
-    description: "Generate detailed custom reports for comprehensive fleet analysis and insights"
+    title: "Live GPS Updates",
+    description: "High-accuracy location tracking with real-time updates every 10 seconds"
   },
   {
     icon: <FiBell className="w-6 h-6" />,
-    title: "Engine Kill Facility",
-    description: "Remote engine control through mobile app for enhanced security"
+    title: "Smart Alerts",
+    description: "Customizable notifications for speed, geofence, and vehicle status"
   },
   {
     icon: <FiMonitor className="w-6 h-6" />,
-    title: "Customized Geo-Fences",
-    description: "Set up virtual boundaries and receive alerts when vehicles enter or exit zones"
-  },
-  {
-    icon: <FiBell className="w-6 h-6" />,
-    title: "Over Speed Alerts",
-    description: "Instant notifications when vehicles exceed preset speed limits"
-  },
-  {
-    icon: <FiMonitor className="w-6 h-6" />,
-    title: "Seat Sensor",
-    description: "Monitor passenger occupancy with integrated seat sensors"
-  },
-  {
-    icon: <FiMapPin className="w-6 h-6" />,
-    title: "Weight Sensor",
-    description: "Track vehicle load weight for compliance and optimization"
+    title: "User-Friendly Dashboard",
+    description: "Intuitive interface accessible from any device, anywhere"
   },
   {
     icon: <FiDollarSign className="w-6 h-6" />,
-    title: "Fuel Sensor",
-    description: "Monitor fuel levels and consumption patterns to prevent theft and optimize usage"
-  },
-  {
-    icon: <FiMonitor className="w-6 h-6" />,
-    title: "Drivers & Stop Report",
-    description: "Detailed reports on driver behavior, stops, and route efficiency"
+    title: "Affordable Packages",
+    description: "Flexible pricing options for both individual users and fleet managers"
   },
   {
     icon: <FiHeadphones className="w-6 h-6" />,
-    title: "Ignition On/OFF Report",
-    description: "Track when vehicles are started and stopped for better fleet management"
-  },
-  {
-    icon: <FiMapPin className="w-6 h-6" />,
-    title: "Live Traffic Updates",
-    description: "Real-time traffic information for optimal route planning"
-  },
-  {
-    icon: <FiBell className="w-6 h-6" />,
-    title: "Vehicle Idling Report",
-    description: "Monitor and reduce unnecessary idling to save fuel and reduce emissions"
-  },
-  {
-    icon: <FiMapPin className="w-6 h-6" />,
-    title: "Driver ID Key",
-    description: "Identify and track individual drivers for accountability and performance monitoring"
+    title: "Lifetime Support",
+    description: "Dedicated technical support team available 24/7 for assistance"
   }
 ];
 
@@ -75,13 +40,16 @@ const KeyBenefits = () => {
   });
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 relative overflow-hidden bg-gradient-to-b from-white via-brand-50 to-brand-100/50">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,rgba(29,78,216,0.15),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(56,189,248,0.25),transparent_65%)]" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-black">
+          <h2 className="text-4xl font-bold text-slate-900">
             Why Choose Apple Tracker?
           </h2>
-          <p className="mt-4 text-xl text-gray-600">
+          <div className="mx-auto mt-4 h-1.5 w-40 rounded-full bg-gradient-to-r from-brand-400 via-brand-600 to-brand-400" />
+          <p className="mt-6 text-xl text-slate-600">
             Experience the advantages that make us the preferred choice
           </p>
         </div>
@@ -96,17 +64,17 @@ const KeyBenefits = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-xl border border-gray-300 p-6 hover:border-black transition-all duration-300"
+              className="bg-white/85 backdrop-blur rounded-2xl border border-brand-200 shadow-sm p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               <div className="flex items-center mb-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-black" style={{backgroundColor:'#C0C0C0'}}>
+                <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-brand-50 to-brand-100 text-brand-700 ring-1 ring-brand-300 shadow-inner">
                   {benefit.icon}
                 </div>
-                <h3 className="ml-4 text-xl font-semibold text-black">
+                <h3 className="ml-4 text-xl font-semibold text-slate-900">
                   {benefit.title}
                 </h3>
               </div>
-              <p className="text-gray-700">
+              <p className="text-slate-700">
                 {benefit.description}
               </p>
             </motion.div>

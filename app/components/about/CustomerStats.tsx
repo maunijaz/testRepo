@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 
 const stats = [
   {
-    number: 2000,
+    number: 50000,
     label: 'Active Users',
     suffix: '+',
   },
@@ -33,26 +33,26 @@ const CustomerStats = () => {
   });
 
   return (
-    <section ref={ref} className="relative py-20 bg-white">
-      <div className="absolute inset-0 bg-gray-50 opacity-50" />
+    <section ref={ref} className="relative py-20 bg-gradient-to-b from-brand-50 to-white">
+      <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]" />
 
       <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl relative after:content-[''] after:block after:w-24 after:h-1 after:rounded-full after:bg-brand-500 after:mx-auto after:mt-4">
             Our Impact in Numbers
           </h2>
-          <p className="max-w-2xl mx-auto mt-4 text-lg text-gray-600">
+          <p className="max-w-2xl mx-auto mt-4 text-lg text-slate-600">
             Trusted by thousands of customers worldwide for reliable vehicle tracking solutions.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 min-[590px]:grid-cols-2 gap-8 mt-16 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-8 mt-16 lg:grid-cols-4">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="p-6 text-center bg-white rounded-2xl border border-gray-300 hover:border-black transition-all duration-300 transform hover:-translate-y-1"
+              className="p-6 text-center bg-white/90 backdrop-blur rounded-2xl border border-brand-100 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
             >
-              <div className="flex items-center justify-center text-4xl font-bold text-black">
+              <div className="flex items-center justify-center text-4xl font-bold text-brand-700">
                   {inView && (
                     <CountUp
                       end={stat.number}
@@ -63,7 +63,7 @@ const CustomerStats = () => {
                   )}
                 <span>{stat.suffix}</span>
               </div>
-              <p className="mt-2 text-lg font-medium text-gray-700">{stat.label}</p>
+              <p className="mt-2 text-lg font-medium text-slate-700">{stat.label}</p>
             </div>
           ))}
         </div>
