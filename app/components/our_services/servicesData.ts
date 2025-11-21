@@ -18,20 +18,11 @@ const raw = [
     keywords: ['Installation', 'Configuration', 'Technician'],
   },
   {
-    slug: 'tracking-reports',
-    title: 'Tracking Reports',
-    short: 'Comprehensive reports and analytics for fleet management.',
-    description:
-      'Access detailed tracking reports including history playback, speed violation reports, fuel consumption analysis, temperature sensor data, maintenance records, OBD data, and passenger reports. All reports can be automatically received through email for your convenience.',
-    image: '/images/servicesDet/pic7.jpg',
-    keywords: ['Reports', 'Analytics', 'Fleet Management'],
-  },
-  {
     slug: 'real-time-tracking',
     title: 'Real-Time Tracking',
     short: 'Live location, route, speed and history on web & mobile.',
     description:
-      'View your vehicle\'s live location, route, speed, and travel history anytime using our web or mobile app. Real-time updates help you respond faster and manage vehicles more effectively.',
+      'View your vehicle’s live location, route, speed, and travel history anytime using our web or mobile app. Real-time updates help you respond faster and manage vehicles more effectively.',
     image: '/images/servicesDet/pic3.jpg',
     keywords: ['Real-time', 'Live', 'History'],
   },
@@ -40,9 +31,18 @@ const raw = [
     title: 'Smart Alerts & Notifications',
     short: 'Instant alerts for overspeeding, geofence exits and more.',
     description:
-      'Receive instant alerts for over-speeding, ignition ON/OFF, geofence exits, battery removal, and unauthorized vehicle movement via SMS or app. Customize speed thresholds, notification channels, and alert preferences to fit your operations and ensure vehicle safety.',
+      'Receive instant alerts for over-speeding, ignition ON/OFF, geofence exits, or battery removal via SMS or app. Customize thresholds and notification channels to fit your operations.',
     image: '/images/servicesDet/pic4.png',
-    keywords: ['Alerts', 'Overspeed', 'Geofence', 'Notifications'],
+    keywords: ['Alerts', 'Geofence', 'Notifications'],
+  },
+  {
+    slug: 'fleet-management',
+    title: 'Fleet Management Solutions',
+    short: 'Manage multiple vehicles with reports and playback.',
+    description:
+      'Manage multiple vehicles easily — access detailed trip reports, route playback, idle time, and monthly summaries to optimize operations and reduce costs.',
+    image: '/images/servicesDet/pic5.jpg',
+    keywords: ['Fleet', 'Reports', 'Optimization'],
   },
   {
     slug: 'after-sales-support',
