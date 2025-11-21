@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaPhoneAlt } from 'react-icons/fa';
+import { LogIn } from 'lucide-react';
 
 const navItems = [
   { label: 'Home', href: '/' },
@@ -19,6 +19,7 @@ const Navbar: React.FC = () => {
   const pathname = usePathname();
   const [activeIndex, setActiveIndex] = useState(0);
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
+  const [scrolled, setScrolled] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
@@ -53,6 +54,18 @@ const Navbar: React.FC = () => {
   }, [pathname]);
 
   useEffect(() => {
+    // Handle scroll event
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    handleScroll(); // Check initial scroll position
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
     // Update indicator position based on active item
     const updateIndicator = () => {
       const activeItem = itemRefs.current[activeIndex];
@@ -76,18 +89,22 @@ const Navbar: React.FC = () => {
   }, [activeIndex]);
 
   return (
-    <header className="bg-white border-b border-gray-300 sticky top-0 z-50">
+    <header className={`sticky top-0 z-50 border-b transition-all duration-300 ${
+      scrolled 
+        ? 'bg-white/70 backdrop-blur-md supports-[backdrop-filter]:bg-white/60 border-brand-200 shadow-sm' 
+        : 'bg-white border-brand-200'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Left: Logo */}
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative w-12 h-12">
+              <div className="relative w-16 h-16 rounded-md overflow-hidden">
                 <Image
-                  src="/images/logo.jpeg"
+                  src="/images/logo.png"
                   alt="Apple Tracker Logo"
                   fill
-                  className="object-contain"
+                  className="object-contain mix-blend-multiply"
                 />
               </div>
               <div className="text-lg font-bold text-black">Apple Tracker</div>
@@ -95,10 +112,10 @@ const Navbar: React.FC = () => {
           </div>
           {/* Center: Navigation (centered) */}
           <div className="hidden md:flex flex-1 justify-center">
-            <nav ref={navRef} className="flex items-center space-x-4 relative">
+            <nav ref={navRef} className="flex items-center space-x-2 relative px-2">
               {/* Animated background indicator */}
               <motion.div
-                className="absolute bg-gray-100 rounded-md"
+                className="absolute top-1/2 -translate-y-1/2 rounded-xl bg-gradient-to-r from-brand-50 via-brand-100 to-brand-50 border border-brand-200 shadow-inner"
                 initial={false}
                 animate={{
                   left: indicatorStyle.left,
@@ -109,7 +126,7 @@ const Navbar: React.FC = () => {
                   stiffness: 300,
                   damping: 30,
                 }}
-                style={{ height: '40px', zIndex: 0 }}
+                style={{ height: '42px', zIndex: 0 }}
               />
               {navItems.map((item, index) => {
                 const active = isActive(item.href);
@@ -118,40 +135,28 @@ const Navbar: React.FC = () => {
                     key={item.href}
                     href={item.href}
                     ref={(el) => { itemRefs.current[index] = el; }}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150 relative z-10 ${
-                      active ? 'text-black' : 'text-gray-700 hover:text-black'
+                    className={`px-4 py-2 rounded-md text-sm font-medium tracking-wide relative z-10 transition-colors duration-200 ${
+                      active ? 'text-brand-700' : 'text-slate-600 hover:text-brand-700'
                     }`}
                   >
                     {item.label}
+                    {active && <span className="absolute left-1/2 -bottom-1 h-1 w-8 -translate-x-1/2 rounded-full bg-gradient-to-r from-brand-400 via-brand-600 to-brand-400" />}
                   </Link>
                 );
               })}
             </nav>
           </div>
 
-          {/* Right: Phone and Mobile button */}
+          {/* Right: Login and Mobile button */}
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center">
-              <a 
-                href="tel:+923168297204" 
-                className="flex items-center gap-2 text-sm font-medium text-black bg-gray-100 px-3 py-2 rounded-md hover:bg-gray-200 transition-colors group"
+              <Link target='_blank'
+                href="https://play.google.com/store/apps/details?id=com.wetrackadnate.flutter" 
+                className="flex items-center gap-2 text-sm font-medium text-white bg-gradient-to-r from-brand-600 to-brand-700 px-5 py-2.5 rounded-lg hover:from-brand-700 hover:to-brand-800 transition-all duration-200 shadow-md hover:shadow-lg group"
               >
-                <motion.div
-                  animate={{ 
-                    rotate: [0, -15, 15, -15, 15, 0],
-                  }}
-                  transition={{
-                    duration: 1,
-                    repeat: Infinity,
-                    repeatDelay: 2,
-                    ease: "easeInOut"
-                  }}
-                  className="inline-flex"
-                >
-                  <FaPhoneAlt className="w-4 h-4 text-black" />
-                </motion.div>
-                <span>+923168297204</span>
-              </a>
+                <LogIn className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                <span>Login</span>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
@@ -159,7 +164,7 @@ const Navbar: React.FC = () => {
               <button
                 aria-label="Toggle menu"
                 onClick={() => setOpen((s) => !s)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 transition-colors"
+                className="inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:bg-brand-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-400 transition-colors"
               >
                 <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   {open ? (
@@ -182,7 +187,7 @@ const Navbar: React.FC = () => {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="md:hidden bg-white border-t border-gray-300 overflow-hidden"
+            className="md:hidden bg-white/80 backdrop-blur border-t border-brand-200 overflow-hidden"
           >
             <motion.div
               initial={{ y: -20 }}
@@ -204,7 +209,7 @@ const Navbar: React.FC = () => {
                       href={item.href}
                       onClick={() => setOpen(false)}
                       className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-200 ${
-                        active ? 'text-black bg-gray-100' : 'text-gray-700 hover:text-black hover:bg-gray-100'
+                        active ? 'text-brand-700 bg-brand-50' : 'text-slate-600 hover:text-brand-700 hover:bg-brand-50'
                       }`}
                     >
                       {item.label}
@@ -218,27 +223,14 @@ const Navbar: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: navItems.length * 0.05 }}
               >
-                <a
-                  href="tel:+923168297204"
+                <Link
+                  href="/login"
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium text-black bg-gray-100 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium text-white bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 transition-all duration-200 shadow-md"
                 >
-                  <motion.div
-                    animate={{ 
-                      rotate: [0, -15, 15, -15, 15, 0],
-                    }}
-                    transition={{
-                      duration: 1,
-                      repeat: Infinity,
-                      repeatDelay: 2,
-                      ease: "easeInOut"
-                    }}
-                    className="inline-flex"
-                  >
-                    <FaPhoneAlt className="w-4 h-4 text-black" />
-                  </motion.div>
-                  <span>+923168297204</span>
-                </a>
+                  <LogIn className="w-4 h-4" />
+                  <span>Login</span>
+                </Link>
               </motion.div>
             </motion.div>
           </motion.div>

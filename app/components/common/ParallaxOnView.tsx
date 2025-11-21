@@ -7,12 +7,15 @@ type Props = {
   speed?: number; // multiplier for parallax
   max?: number; // max translate pixels
   className?: string;
+  fadeIn?: boolean; // optional fade-in on enter
+  as?: React.ElementType; // optional wrapper element tag
 };
 
-const ParallaxOnView: React.FC<Props> = ({ children, speed = 0.15, max = 200, className = "" }) => {
+const ParallaxOnView: React.FC<Props> = ({ children, speed = 0.15, max = 200, className = "", fadeIn = false, as: Tag = 'div' }) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const rafRef = useRef<number | null>(null);
   const inViewRef = useRef(false);
+  const hasIntersectedRef = useRef(false);
 
   useEffect(() => {
     const el = ref.current;
@@ -22,8 +25,16 @@ const ParallaxOnView: React.FC<Props> = ({ children, speed = 0.15, max = 200, cl
       entries.forEach((entry) => {
         inViewRef.current = entry.isIntersecting;
         // when it becomes intersecting, trigger one frame to update position
-        if (entry.isIntersecting) triggerUpdate();
-        else {
+        if (entry.isIntersecting) {
+          hasIntersectedRef.current = true;
+          triggerUpdate();
+          if (fadeIn) {
+            el.style.opacity = '1';
+          }
+        } else {
+          if (fadeIn) {
+            el.style.opacity = hasIntersectedRef.current ? '0' : '0';
+          }
           // reset transform when out of view
           el.style.transform = "translate3d(0,0,0)";
         }
@@ -69,9 +80,12 @@ const ParallaxOnView: React.FC<Props> = ({ children, speed = 0.15, max = 200, cl
   }, [speed, max]);
 
   return (
-    <div ref={ref} className={`will-change-transform transition-transform duration-200 ${className}`}>
+    <Tag
+      ref={ref as any}
+      className={`will-change-transform transition-transform duration-200 ${fadeIn ? 'opacity-0 transition-opacity ease-out' : ''} ${className}`}
+    >
       {children}
-    </div>
+    </Tag>
   );
 };
 

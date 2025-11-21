@@ -36,27 +36,27 @@ const ContactHero = () => {
   }, []);
 
   return (
-    <section className="relative py-20 overflow-hidden bg-white">
+    <section className="relative py-20 overflow-hidden bg-gradient-to-br from-sky-50 via-blue-50 to-white">
       <div
         ref={bgRef}
-        className="absolute inset-0 bg-gray-100 will-change-transform"
-        style={{ transition: 'transform 0.15s linear' }}
+        className="absolute inset-0 will-change-transform"
+        style={{ transition: 'transform 0.15s linear', backgroundImage: 'radial-gradient(circle at 30% 50%, rgba(59,130,246,0.12), transparent 55%)' }}
       />
       <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex justify-center mb-6">
-            <div className="inline-flex items-center justify-center w-16 h-16 text-black rounded-lg" style={{backgroundColor:'#C0C0C0'}}>
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-700 ring-1 ring-blue-200">
               <FaPhoneAlt className="w-8 h-8" />
             </div>
           </div>
-          <h1 className="text-4xl font-extrabold tracking-tight text-black sm:text-5xl">
+          <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
             Contact Us
           </h1>
-          <p className="mt-6 text-xl leading-8 text-gray-700">
+          <p className="mt-6 text-xl leading-8 text-slate-700">
             Want to track your bike, car, or heavy vehicle?
             We're here to help you choose the perfect GPS tracking solution for your needs.
           </p>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-slate-600">
             Track anything — from a single bike to a fleet of trucks.
             Stay connected. Stay secure.
           </p>
