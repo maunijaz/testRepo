@@ -3,33 +3,68 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiMapPin, FiBell, FiMonitor, FiDollarSign, FiHeadphones } from 'react-icons/fi';
+import { FiMapPin, FiBell, FiMonitor, FiDollarSign, FiHeadphones, FiThermometer, FiTrendingUp, FiFileText, FiUsers, FiActivity, FiTruck, FiAlertCircle, FiMail } from 'react-icons/fi';
 
 const benefits = [
   {
-    icon: <FiMapPin className="w-6 h-6" />,
-    title: "Live GPS Updates",
-    description: "High-accuracy location tracking with real-time updates every 10 seconds"
+    icon: <FiActivity className="w-6 h-6" />,
+    title: "History Playback",
+    description: "Review complete vehicle journey history with playback functionality"
   },
   {
-    icon: <FiBell className="w-6 h-6" />,
-    title: "Smart Alerts",
-    description: "Customizable notifications for speed, geofence, and vehicle status"
+    icon: <FiTrendingUp className="w-6 h-6" />,
+    title: "Speed violation report",
+    description: "Monitor and track speed limit violations across your fleet"
   },
   {
-    icon: <FiMonitor className="w-6 h-6" />,
-    title: "User-Friendly Dashboard",
-    description: "Intuitive interface accessible from any device, anywhere"
+    icon: <FiThermometer className="w-6 h-6" />,
+    title: "Temperature sensor report",
+    description: "Track temperature conditions for refrigerated vehicles"
   },
   {
     icon: <FiDollarSign className="w-6 h-6" />,
-    title: "Affordable Packages",
-    description: "Flexible pricing options for both individual users and fleet managers"
+    title: "Fuel consumption report",
+    description: "Detailed analysis of fuel usage and consumption patterns"
   },
   {
-    icon: <FiHeadphones className="w-6 h-6" />,
-    title: "Lifetime Support",
-    description: "Dedicated technical support team available 24/7 for assistance"
+    icon: <FiMonitor className="w-6 h-6" />,
+    title: "Salts report",
+    description: "Monitor vehicle status and operational reports"
+  },
+  {
+    icon: <FiTruck className="w-6 h-6" />,
+    title: "Vehicle turn on & turn off through E-mail",
+    description: "Receive instant email notifications for ignition events"
+  },
+  {
+    icon: <FiFileText className="w-6 h-6" />,
+    title: "Device report",
+    description: "Comprehensive reports on device status and performance"
+  },
+  {
+    icon: <FiAlertCircle className="w-6 h-6" />,
+    title: "Maintenance report",
+    description: "Track vehicle maintenance schedules and service history"
+  },
+  {
+    icon: <FiUsers className="w-6 h-6" />,
+    title: "Auto Received Report",
+    description: "Automated report generation and delivery system"
+  },
+  {
+    icon: <FiFileText className="w-6 h-6" />,
+    title: "OBD Data Report",
+    description: "Access on-board diagnostic data for vehicle health monitoring"
+  },
+  {
+    icon: <FiUsers className="w-6 h-6" />,
+    title: "Passenger Reports",
+    description: "Track passenger count and journey details"
+  },
+  {
+    icon: <FiMail className="w-6 h-6" />,
+    title: "Through E-mail",
+    description: "Receive all reports conveniently via email delivery"
   }
 ];
 
@@ -46,17 +81,17 @@ const KeyBenefits = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900">
-            Why Choose Apple Tracker?
+            OUR REPORTS
           </h2>
           <div className="mx-auto mt-4 h-1.5 w-40 rounded-full bg-gradient-to-r from-brand-400 via-brand-600 to-brand-400" />
           <p className="mt-6 text-xl text-slate-600">
-            Experience the advantages that make us the preferred choice
+            Comprehensive reporting system for complete fleet visibility and insights
           </p>
         </div>
 
         <div 
           ref={ref}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
         >
           {benefits.map((benefit, index) => (
             <motion.div

@@ -2,24 +2,24 @@ import { FaHandshake, FaUserShield, FaChartLine, FaHeadset } from 'react-icons/f
 
 const values = [
   {
-    icon: FaUserShield,
-    title: "Trust & Security",
-    description: "We prioritize the security of your data and vehicles, ensuring peace of mind through advanced encryption and reliable tracking systems."
-  },
-  {
-    icon: FaHandshake,
-    title: "Customer First",
-    description: "Our commitment to customer satisfaction drives every decision we make, from product development to after-sales support."
+    icon: FaHeadset,
+    title: "24/7 Customer Support",
+    description: "Our dedicated support team is always available to help you with any questions or technical assistance you need."
   },
   {
     icon: FaChartLine,
-    title: "Innovation",
+    title: "High-tech Technology",
     description: "We continuously evolve our technology to provide cutting-edge solutions that meet the changing needs of our customers."
   },
   {
-    icon: FaHeadset,
-    title: "24/7 Support",
-    description: "Our dedicated support team is always available to help you with any questions or technical assistance you need."
+    icon: FaUserShield,
+    title: "Professional Staff",
+    description: "Our experienced team of professionals ensures quality service and expert guidance for all your tracking needs."
+  },
+  {
+    icon: FaHandshake,
+    title: "Service on your door step",
+    description: "We provide convenient on-site installation and support services, bringing our expertise directly to your location."
   }
 ];
 

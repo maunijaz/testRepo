@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaPhoneAlt } from 'react-icons/fa';
+import { LogIn } from 'lucide-react';
 
 const navItems = [
   { label: 'Home', href: '/' },
@@ -99,12 +99,12 @@ const Navbar: React.FC = () => {
           {/* Left: Logo */}
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative w-12 h-12">
+              <div className="relative w-16 h-16 rounded-md overflow-hidden">
                 <Image
-                  src="/images/logo.jpeg"
+                  src="/images/logo.png"
                   alt="Apple Tracker Logo"
                   fill
-                  className="object-contain"
+                  className="object-contain mix-blend-multiply"
                 />
               </div>
               <div className="text-lg font-bold text-black">Apple Tracker</div>
@@ -147,29 +147,16 @@ const Navbar: React.FC = () => {
             </nav>
           </div>
 
-          {/* Right: Phone and Mobile button */}
+          {/* Right: Login and Mobile button */}
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center">
-              <a 
-                href="tel:+923168297204" 
-                className="flex items-center gap-2 text-sm font-medium text-brand-700 bg-gradient-to-r from-brand-50 to-brand-100 px-3 py-2 rounded-md border border-brand-200 hover:from-brand-100 hover:to-brand-200 transition-colors group"
+              <Link target='_blank'
+                href="https://play.google.com/store/apps/details?id=com.wetrackadnate.flutter" 
+                className="flex items-center gap-2 text-sm font-medium text-white bg-gradient-to-r from-brand-600 to-brand-700 px-5 py-2.5 rounded-lg hover:from-brand-700 hover:to-brand-800 transition-all duration-200 shadow-md hover:shadow-lg group"
               >
-                <motion.div
-                  animate={{ 
-                    rotate: [0, -15, 15, -15, 15, 0],
-                  }}
-                  transition={{
-                    duration: 1,
-                    repeat: Infinity,
-                    repeatDelay: 2,
-                    ease: "easeInOut"
-                  }}
-                  className="inline-flex"
-                >
-                  <FaPhoneAlt className="w-4 h-4 text-brand-600" />
-                </motion.div>
-                <span>+923168297204</span>
-              </a>
+                <LogIn className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                <span>Login</span>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
@@ -236,27 +223,14 @@ const Navbar: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: navItems.length * 0.05 }}
               >
-                <a
-                  href="tel:+923168297204"
+                <Link
+                  href="/login"
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium text-brand-700 bg-gradient-to-r from-brand-50 to-brand-100 border border-brand-200 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium text-white bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 transition-all duration-200 shadow-md"
                 >
-                  <motion.div
-                    animate={{ 
-                      rotate: [0, -15, 15, -15, 15, 0],
-                    }}
-                    transition={{
-                      duration: 1,
-                      repeat: Infinity,
-                      repeatDelay: 2,
-                      ease: "easeInOut"
-                    }}
-                    className="inline-flex"
-                  >
-                    <FaPhoneAlt className="w-4 h-4 text-brand-600" />
-                  </motion.div>
-                  <span>+923168297204</span>
-                </a>
+                  <LogIn className="w-4 h-4" />
+                  <span>Login</span>
+                </Link>
               </motion.div>
             </motion.div>
           </motion.div>

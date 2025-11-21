@@ -55,12 +55,15 @@ const ServiceDetail: React.FC<{ service: Service; otherServices: Service[] }> = 
       <div className="mt-12">
         <h3 className="text-xl font-semibold text-slate-900">More services</h3>
         <div className="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 lg:grid-cols-3">
-          {otherServices.map((s) => (
-            <Link key={s.id} href={`/our_services/${s.id}`} className="p-5 bg-white rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition">
-              <h4 className="text-lg font-medium text-slate-900">{s.title}</h4>
-              <p className="mt-1 text-sm text-slate-700">{s.short}</p>
-            </Link>
-          ))}
+          {otherServices.map((s) => {
+            const serviceId = (s as any).id ?? s.slug;
+            return (
+              <Link key={serviceId} href={`/our_services/${serviceId}`} className="p-5 bg-white rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition">
+                <h4 className="text-lg font-medium text-slate-900">{s.title}</h4>
+                <p className="mt-1 text-sm text-slate-700">{s.short}</p>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>

@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
           <div>
             <p className="text-slate-900 font-semibold">Contact</p>
             <p className="text-slate-700">+923168297204</p>
-            <p className="text-slate-700">Shaheen plaza flat No 2 Archer road Quetta</p>
+            <p className="text-slate-700">Shahi plaza flat No 2 Archer road Quetta</p>
           </div>
 
           <div className="text-sm text-slate-600">© {new Date().getFullYear()} Apple Tracker. All rights reserved.</div>

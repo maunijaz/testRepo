@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 
 const stats = [
   {
-    number: 50000,
+    number: 3500,
     label: 'Active Users',
     suffix: '+',
   },
@@ -46,7 +46,7 @@ const CustomerStats = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 mt-16 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-8 mt-16 lg:grid-cols-4 max-[514px]:grid-cols-1">
           {stats.map((stat, index) => (
             <div
               key={index}

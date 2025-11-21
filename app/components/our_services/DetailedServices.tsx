@@ -8,67 +8,68 @@ import { FiShield, FiTruck, FiTool, FiHeadphones, FiGrid } from 'react-icons/fi'
 const services = [
   {
     icon: <FiShield className="w-8 h-8" />,
-    title: "Personal Vehicle Tracking",
+    title: "Vehicle Tracking System",
     image: "/images/services/pic1.jpg",
-    description: "Keep your vehicle secure and monitored with our advanced tracking solution.",
+    description: "Track your fleet anytime, anywhere in real-time with comprehensive features.",
     features: [
-      "Real-time location updates",
-      "Anti-theft alerts",
-      "Complete route history",
-      "Mobile app control",
-      "Geofence notifications"
+      "Basic tracking",
+      "Personal Tracking",
+      "School Bus Tracking",
+      "Cab Management",
+      "Courier & Delivery",
+      "Travel Management Solution"
     ]
   },
   {
     icon: <FiTruck className="w-8 h-8" />,
-    title: "Fleet Tracking & Management",
+    title: "Access Control System",
     image: "/images/services/pic2.jpg",
-    description: "Comprehensive fleet management solution for businesses of all sizes.",
+    description: "Advanced access control and security management for your vehicles and facilities.",
     features: [
-      "Multi-vehicle dashboard",
-      "Driver behavior analytics",
-      "Automated reports",
-      "Fuel consumption monitoring",
-      "Maintenance scheduling"
+      "Biometric access control",
+      "RFID card systems",
+      "Door lock controls",
+      "Authorized personnel tracking",
+      "Entry/exit logs"
     ]
   },
   {
     icon: <FiTool className="w-8 h-8" />,
-    title: "Installation & Configuration",
+    title: "Fuel Sensor",
     image: "/images/services/pic3.jpg",
-    description: "Professional setup service ensuring optimal performance of your tracking system.",
+    description: "Monitor fuel consumption and prevent fuel theft with accurate sensor technology.",
     features: [
-      "Expert installation team",
-      "Clean and hidden wiring",
-      "System configuration",
-      "Performance testing",
-      "Setup verification"
+      "Real-time fuel monitoring",
+      "Fuel theft detection",
+      "Consumption reports",
+      "Tank level alerts",
+      "Refueling notifications"
     ]
   },
   {
     icon: <FiHeadphones className="w-8 h-8" />,
-    title: "Maintenance & Support",
+    title: "School Bus Monitoring",
     image: "/images/services/pic4.jpg",
-    description: "Round-the-clock support and maintenance to keep your tracking system running smoothly.",
+    description: "Ensure student safety with dedicated school bus tracking and monitoring solutions.",
     features: [
-      "24/7 customer assistance",
-      "Warranty coverage",
-      "Regular system updates",
-      "Technical troubleshooting",
-      "Remote diagnostics"
+      "Live bus location tracking",
+      "Student attendance monitoring",
+      "Parent notifications",
+      "Route optimization",
+      "Driver behavior monitoring"
     ]
   },
   {
     icon: <FiGrid className="w-8 h-8" />,
-    title: "Custom Enterprise Solutions",
+    title: "School Attendance & Transmission Monitoring",
     image: "/images/services/pic5.jpg",
-    description: "Tailored tracking solutions for large-scale operations and specific industry needs.",
+    description: "Complete attendance and vehicle transmission monitoring system for educational institutions.",
     features: [
-      "Custom implementation",
-      "API integration",
-      "Scalable infrastructure",
-      "Industry-specific features",
-      "Dedicated account manager"
+      "Automated attendance tracking",
+      "RFID student cards",
+      "Transmission diagnostics",
+      "Parent/admin dashboards",
+      "Real-time alerts"
     ]
   }
 ];

@@ -57,24 +57,26 @@ const ContactForm = () => {
       const whatsappNumber = '923168297204';
       const message = `Hello Apple Tracker Team! 👋
 
-I hope this message finds you well. I would like to inquire about your GPS tracking services.
+    I hope this message finds you well. I would like to inquire about your GPS tracking services.
 
-*Contact Details:*
-━━━━━━━━━━━━━━━━━━━━
-👤 *Name:* ${formData.name}
-📧 *Email:* ${formData.email}
-📱 *Phone:* ${formData.phone}
-🚗 *Vehicle Type:* ${formData.vehicleType.charAt(0).toUpperCase() + formData.vehicleType.slice(1)}
+    *Contact Details:*
+    ━━━━━━━━━━━━━━━━━━━━
+    👤 *Name:* ${formData.name}
+    📧 *Email:* ${formData.email}
+    📱 *Phone:* ${formData.phone}
+    🚗 *Vehicle Type:* ${formData.vehicleType.charAt(0).toUpperCase() + formData.vehicleType.slice(1)}
 
-*Message:*
-━━━━━━━━━━━━━━━━━━━━
-${formData.message}
+    *Message:*
+    ━━━━━━━━━━━━━━━━━━━━
+    ${formData.message}
 
-━━━━━━━━━━━━━━━━━━━━
-Looking forward to hearing from you!
+    ━━━━━━━━━━━━━━━━━━━━
+    I followed you by your website and would love to learn more about how your tracking solutions works.
+    🔗 *Website:* https://www.appletracker.pk/
+    Looking forward to hearing from you!
 
-Best regards,
-${formData.name}`;
+    Best regards,
+    ${formData.name}`;
 
       // Encode message for URL
       const encodedMessage = encodeURIComponent(message);

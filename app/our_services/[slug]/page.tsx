@@ -34,9 +34,9 @@ export default async function Page({ params }: Props) {
 
   return (
     <main className="relative min-h-screen bg-gradient-to-br from-white via-brand-50 to-brand-100/60 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_25%,rgba(56,189,248,0.25),transparent_65%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_70%,rgba(29,78,216,0.18),transparent_60%)]" />
-      <div className="absolute inset-0 opacity-10 pattern-dots" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_25%,rgba(56,189,248,0.25),transparent_65%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_70%,rgba(29,78,216,0.18),transparent_60%)] pointer-events-none" />
+      <div className="absolute inset-0 opacity-10 pattern-dots pointer-events-none" />
       <ServiceDetail service={service} otherServices={other} />
     </main>
   );

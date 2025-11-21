@@ -1,13 +1,13 @@
 import Link from 'next/link';
-import { FaCar, FaTools, FaBolt, FaBell, FaTruck, FaLifeRing } from 'react-icons/fa';
+import { FaCar, FaTools, FaBolt, FaBell, FaTruck, FaLifeRing, FaMapMarkerAlt, FaUser, FaBus, FaIndustry, FaShippingFast, FaBoxes } from 'react-icons/fa';
 import { services } from './servicesData';
 
 const iconMap: Record<string, any> = {
   'GPS Trackers for All Vehicles': FaCar,
   'Professional Installation': FaTools,
+  'Tracking Reports': FaBell,
   'Real-Time Tracking': FaBolt,
   'Smart Alerts & Notifications': FaBell,
-  'Fleet Management Solutions': FaTruck,
   'After-Sales & Technical Support': FaLifeRing,
 };
 

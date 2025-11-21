@@ -27,7 +27,7 @@ const ContactInfo = () => {
               <div className="flex items-start space-x-3">
                 <FiMapPin className="text-blue-700 w-5 h-5 mt-1" />
                 <span className="text-slate-700">
-                  Shaheen plaza flat No 2 Archer road<br />
+                  Shahi plaza flat No 2 Archer road<br />
                   Quetta<br />
                   Pakistan
                 </span>
