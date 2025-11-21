@@ -150,13 +150,15 @@ const Navbar: React.FC = () => {
           {/* Right: Login and Mobile button */}
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center">
-              <Link target='_blank'
-                href="https://play.google.com/store/apps/details?id=com.wetrackadnate.flutter" 
+              <a
+                href="https://play.google.com/store/apps/details?id=com.wetrackadnate.flutter"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm font-medium text-white bg-gradient-to-r from-brand-600 to-brand-700 px-5 py-2.5 rounded-lg hover:from-brand-700 hover:to-brand-800 transition-all duration-200 shadow-md hover:shadow-lg group"
               >
                 <LogIn className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                 <span>Login</span>
-              </Link>
+              </a>
             </div>
 
             {/* Mobile menu button */}
@@ -223,14 +225,16 @@ const Navbar: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: navItems.length * 0.05 }}
               >
-                <Link
-                  href="/login"
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.wetrackadnate.flutter"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
                   className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium text-white bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 transition-all duration-200 shadow-md"
                 >
                   <LogIn className="w-4 h-4" />
                   <span>Login</span>
-                </Link>
+                </a>
               </motion.div>
             </motion.div>
           </motion.div>
