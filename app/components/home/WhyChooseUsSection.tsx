@@ -49,7 +49,7 @@ const WhyChooseUsSection = () => {
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="text-center mb-16">
 					<h2 className="text-4xl font-bold text-slate-900 mb-4 relative after:content-[''] after:block after:w-24 after:h-1 after:rounded-full after:bg-brand-500 after:mx-auto after:mt-4">
-						Why Choose Apple Tracker?
+						Why Choose Us?
 					</h2>
 					<p className="text-xl text-slate-600 max-w-3xl mx-auto">
 						At Apple Tracker, we go beyond just showing your vehicle's location — we
@@ -84,5 +84,6 @@ const WhyChooseUsSection = () => {
 		</section>
 	);
 };
+
 
 export default WhyChooseUsSection;
